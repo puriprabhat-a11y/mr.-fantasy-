@@ -1,0 +1,826 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Digital marketing portfolio of Prabhat Puri, a Delhi-based SEO, automation, ads, and performance marketing specialist.">
+  <title>Prabhat Puri | Digital Marketing Portfolio</title>
+  <style>
+    :root {
+      --ink: #101010;
+      --muted: #626262;
+      --paper: #f4f1ea;
+      --white: #ffffff;
+      --line: #d7d0c5;
+      --lime: #c6ff4d;
+      --clay: #bf694a;
+      --shadow: 0 24px 80px rgba(16, 16, 16, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.55;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: grid;
+      grid-template-columns: minmax(180px, 1fr) auto minmax(140px, 1fr);
+      align-items: center;
+      gap: 20px;
+      padding: 18px clamp(18px, 4vw, 54px);
+      border-bottom: 1px solid rgba(16, 16, 16, 0.12);
+      background: rgba(244, 241, 234, 0.92);
+      backdrop-filter: blur(18px);
+    }
+
+    .brand,
+    .header-cta,
+    .nav a,
+    .contact-actions a {
+      text-decoration: none;
+    }
+
+    .brand {
+      display: grid;
+      width: max-content;
+      font-weight: 800;
+      line-height: 1.1;
+    }
+
+    .brand small {
+      color: var(--muted);
+      font-size: 0.76rem;
+      font-weight: 700;
+    }
+
+    .nav {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 6px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.52);
+    }
+
+    .nav a {
+      padding: 8px 14px;
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 800;
+    }
+
+    .nav a:hover {
+      color: var(--ink);
+      background: var(--white);
+    }
+
+    .header-cta {
+      justify-self: end;
+      display: inline-grid;
+      place-items: center;
+      min-height: 42px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      color: var(--white);
+      background: var(--ink);
+      font-weight: 800;
+    }
+
+    .home,
+    .about,
+    .services,
+    .process,
+    .contact {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .home {
+      padding: 44px 0 76px;
+    }
+
+    .availability {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 38px;
+      padding: 10px 16px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.58);
+    }
+
+    .availability span {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--lime);
+      box-shadow: 0 0 0 6px rgba(198, 255, 77, 0.22);
+    }
+
+    .availability p,
+    .eyebrow,
+    .section-label {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(330px, 0.75fr);
+      gap: clamp(28px, 5vw, 74px);
+      align-items: end;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      margin: 10px 0 0;
+      font-size: clamp(4.4rem, 14vw, 12rem);
+      line-height: 0.82;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      margin-bottom: 0;
+      font-size: clamp(2.2rem, 5vw, 5rem);
+      line-height: 0.95;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: clamp(1.25rem, 2vw, 1.75rem);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    .hero-card {
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card p {
+      margin-bottom: 22px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .contact-strip,
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .contact-strip a,
+    .contact-actions a {
+      display: inline-grid;
+      place-items: center;
+      min-height: 42px;
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper);
+      font-weight: 850;
+      text-decoration: none;
+    }
+
+    .contact-strip a:hover,
+    .contact-actions a:hover {
+      border-color: var(--ink);
+      background: var(--lime);
+    }
+
+    .hero-media {
+      position: relative;
+      margin-top: 44px;
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--ink);
+    }
+
+    .hero-media img {
+      width: 100%;
+      height: clamp(320px, 52vw, 620px);
+      object-fit: cover;
+      opacity: 0.82;
+    }
+
+    .scoreboard {
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      bottom: 24px;
+      display: grid;
+      grid-template-columns: 0.8fr 0.8fr 1fr;
+      gap: 12px;
+    }
+
+    .scoreboard div {
+      min-height: 120px;
+      padding: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.32);
+      border-radius: 8px;
+      color: var(--white);
+      background: rgba(16, 16, 16, 0.62);
+      backdrop-filter: blur(12px);
+    }
+
+    .scoreboard strong,
+    .scoreboard span {
+      display: block;
+    }
+
+    .scoreboard strong {
+      margin-bottom: 18px;
+      font-size: clamp(1.7rem, 4vw, 3.4rem);
+      line-height: 0.95;
+    }
+
+    .scoreboard span {
+      color: rgba(255, 255, 255, 0.78);
+      font-weight: 750;
+    }
+
+    .marquee {
+      display: flex;
+      gap: 12px;
+      overflow: hidden;
+      padding: 16px max(20px, calc((100vw - 1180px) / 2));
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: var(--ink);
+    }
+
+    .marquee span {
+      flex: 0 0 auto;
+      padding: 10px 18px;
+      border-radius: 999px;
+      color: var(--ink);
+      background: var(--lime);
+      font-weight: 900;
+    }
+
+    .about,
+    .services,
+    .process,
+    .contact {
+      padding: 92px 0;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.65fr);
+      gap: clamp(28px, 5vw, 72px);
+      align-items: end;
+    }
+
+    .about p,
+    .project-copy p,
+    .services-grid p,
+    .process-list p {
+      color: var(--muted);
+    }
+
+    .about p {
+      margin: 36px 0 0;
+      font-size: 1.13rem;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(180px, 0.34fr) minmax(0, 1fr);
+      gap: 32px;
+      align-items: start;
+      margin-bottom: 34px;
+    }
+
+    .project-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    .project {
+      display: grid;
+      grid-template-rows: 310px auto;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--white);
+    }
+
+    .project-large {
+      grid-column: 1 / -1;
+      grid-template-columns: minmax(0, 1.1fr) minmax(360px, 0.9fr);
+      grid-template-rows: auto;
+    }
+
+    .project img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .project-copy {
+      padding: clamp(22px, 4vw, 38px);
+    }
+
+    .project-copy span,
+    .services-grid span,
+    .process-list span {
+      display: block;
+      margin-bottom: 22px;
+      color: var(--clay);
+      font-size: 0.82rem;
+      font-weight: 950;
+      text-transform: uppercase;
+    }
+
+    .project-copy ul {
+      display: grid;
+      gap: 10px;
+      margin: 22px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .project-copy li {
+      padding: 12px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-weight: 740;
+    }
+
+    .meta-grid,
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      border: 1px solid rgba(16, 16, 16, 0.16);
+      background: rgba(16, 16, 16, 0.16);
+    }
+
+    .meta-grid div,
+    .services-grid article {
+      min-height: 230px;
+      padding: 26px;
+      background: var(--white);
+    }
+
+    .meta-grid strong {
+      display: block;
+      margin-bottom: 18px;
+      font-size: 1.3rem;
+    }
+
+    .meta-grid span {
+      color: var(--muted);
+      font-weight: 720;
+    }
+
+    .services-grid {
+      margin-top: 34px;
+      border-color: rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    .services {
+      width: 100%;
+      max-width: none;
+      padding: 92px max(20px, calc((100vw - 1180px) / 2));
+      color: var(--white);
+      background: var(--ink);
+    }
+
+    .services .section-label,
+    .services .services-grid p {
+      color: rgba(255, 255, 255, 0.68);
+    }
+
+    .services-grid article {
+      min-height: 360px;
+      background: #181818;
+    }
+
+    .services-grid span {
+      color: var(--lime);
+    }
+
+    .process-list {
+      display: grid;
+      gap: 1px;
+      border-top: 1px solid var(--line);
+    }
+
+    .process-list div {
+      display: grid;
+      grid-template-columns: 170px minmax(0, 0.72fr) minmax(260px, 1fr);
+      gap: 24px;
+      align-items: start;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .process-list h3,
+    .process-list p {
+      margin-bottom: 0;
+    }
+
+    .contact {
+      min-height: 74vh;
+      display: grid;
+      align-content: center;
+      text-align: center;
+      border-top: 1px solid var(--line);
+    }
+
+    .contact h2 {
+      max-width: 1020px;
+      margin: 18px auto 30px;
+    }
+
+    .contact-actions {
+      justify-content: center;
+    }
+
+    .contact-actions a {
+      min-height: 52px;
+      padding: 14px 20px;
+      background: var(--white);
+    }
+
+    @media (max-width: 980px) {
+      .site-header {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        justify-content: flex-start;
+        overflow-x: auto;
+      }
+
+      .header-cta {
+        justify-self: start;
+      }
+
+      .hero-grid,
+      .about,
+      .section-head,
+      .project-large {
+        grid-template-columns: 1fr;
+      }
+
+      .project-large {
+        grid-template-rows: 330px auto;
+      }
+
+      .scoreboard,
+      .meta-grid,
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .process-list div {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .home,
+      .about,
+      .process,
+      .contact {
+        width: min(100% - 28px, 1180px);
+      }
+
+      .site-header {
+        padding: 14px;
+      }
+
+      .nav {
+        border-radius: 8px;
+      }
+
+      .nav a {
+        padding: 8px 10px;
+      }
+
+      h1 {
+        font-size: clamp(3.8rem, 26vw, 7rem);
+      }
+
+      .hero-card,
+      .project-copy,
+      .services-grid article,
+      .meta-grid div {
+        padding: 20px;
+      }
+
+      .hero-media img {
+        height: 620px;
+      }
+
+      .scoreboard {
+        grid-template-columns: 1fr;
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+      }
+
+      .scoreboard div {
+        min-height: auto;
+      }
+
+      .marquee {
+        padding-inline: 14px;
+      }
+
+      .about,
+      .services,
+      .process,
+      .contact {
+        padding-top: 66px;
+        padding-bottom: 66px;
+      }
+
+      .project-list,
+      .meta-grid,
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project,
+      .project-large {
+        grid-template-rows: 250px auto;
+      }
+
+      .services-grid article,
+      .meta-grid div {
+        min-height: auto;
+      }
+
+      .contact-strip,
+      .contact-actions {
+        display: grid;
+      }
+
+      .contact-strip a,
+      .contact-actions a {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Prabhat Puri home">
+      <span>Prabhat Puri</span>
+      <small>Digital Marketing Portfolio</small>
+    </a>
+
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a class="header-cta" href="mailto:puriprabhat@gmail.com">Let's Talk</a>
+  </header>
+
+  <main>
+    <section class="home" id="home">
+      <div class="availability">
+        <span></span>
+        <p>Available for SEO, paid media, and analytics projects</p>
+      </div>
+
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow">Delhi-based digital marketing specialist</p>
+          <h1>Prabhat<br>Puri</h1>
+        </div>
+        <div class="hero-card">
+          <p>
+            Prabhat Puri boosts online presence through innovative strategy,
+            technical SEO, automation, and a data-driven approach. His work has
+            helped take Fantasy World Holidays' digital journey to new heights.
+          </p>
+          <div class="contact-strip">
+            <a href="tel:+919999503888">9999-503-888</a>
+            <a href="mailto:puriprabhat@gmail.com">puriprabhat@gmail.com</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-media" aria-label="Digital marketing performance snapshot">
+        <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1800&q=80" alt="Open road landscape representing travel marketing growth">
+        <div class="scoreboard">
+          <div>
+            <strong>100</strong>
+            <span>Desktop performance</span>
+          </div>
+          <div>
+            <strong>96-98</strong>
+            <span>Mobile performance</span>
+          </div>
+          <div>
+            <strong>GA4 + GTM</strong>
+            <span>Analytics implementation</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="marquee" aria-label="Core capabilities">
+      <span>Keyword Research</span>
+      <span>Schema Markup</span>
+      <span>Google Ads</span>
+      <span>Meta Ads</span>
+      <span>CRO</span>
+      <span>ROI Analysis</span>
+    </section>
+
+    <section class="about" id="about">
+      <div>
+        <p class="section-label">About</p>
+        <h2>Marketing systems that make search visibility, campaign spend, and customer journeys easier to measure.</h2>
+      </div>
+      <p>
+        Prabhat brings together SEO research, technical implementation, ad strategy,
+        social media management, automation, and analytics. His work for Fantasy
+        World Holidays reflects the practical demands of a travel business: ranking
+        for competitive destination intent, converting visitors with useful package
+        information, and keeping campaigns measurable from first click to inquiry.
+      </p>
+    </section>
+
+    <section class="services" id="services">
+      <div class="section-head">
+        <p class="section-label">Services / Projects</p>
+        <h2>SEO, automation, performance marketing, and Fantasy World Holidays project work</h2>
+      </div>
+
+      <div class="project-list">
+        <article class="project project-large">
+          <img src="https://fantasyworldholidays.com/wp-content/uploads/2026/05/India-Tour-Packages-from-Delhi.jpg" alt="Fantasy World Holidays India tour packages from Delhi">
+          <div class="project-copy">
+            <span>01 / Verified site metadata</span>
+            <h3>India tour packages from Delhi</h3>
+            <p>
+              Fantasy World Holidays metadata describes affordable honeymoon,
+              family, and adventure trips from Delhi across Kashmir, Himachal,
+              Goa, and more. The project section uses this captured positioning
+              to present Prabhat's SEO and campaign work with real travel intent.
+            </p>
+            <ul>
+              <li>Starting package metadata: INR 9,999</li>
+              <li>Review metadata: 4.8 rating</li>
+              <li>Author and trust signal: Prabhat Puri</li>
+              <li>Core offer: customized India tour packages from Delhi</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project">
+          <img src="https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=1200&q=80" alt="Goa beach landscape">
+          <div class="project-copy">
+            <span>02 / Destination campaign</span>
+            <h3>Goa beach holiday funnel</h3>
+            <p>
+              Built content angles around Goa beach holidays, couple travel,
+              family trip planning, sightseeing, water sports, and package-led
+              inquiry intent.
+            </p>
+          </div>
+        </article>
+
+        <article class="project">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1200&q=80" alt="Snow mountain valley">
+          <div class="project-copy">
+            <span>03 / Content SEO</span>
+            <h3>Himachal and Manali search demand</h3>
+            <p>
+              Supported Delhi NCR traveler intent for family trips, honeymoon
+              stays, adventure sports, seasonal planning, and affordable package
+              discovery.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <div class="meta-grid" aria-label="Fantasy World Holidays captured details">
+        <div><strong>Brand</strong><span>Fantasy World Holidays</span></div>
+        <div><strong>Location</strong><span>Vikaspuri Extn, Delhi 110041</span></div>
+        <div><strong>Offer</strong><span>India tour packages from Delhi</span></div>
+        <div><strong>Trust</strong><span>Schema, author, rating, and price metadata</span></div>
+      </div>
+
+      <div class="services-grid">
+        <article>
+          <span>01</span>
+          <h3>SEO & Technical Work</h3>
+          <p>Keyword Planner, LSI keywords, Google Suggest, Ahrefs, Semrush, AnswerThePublic, rich snippets, breadcrumbs, schema markup, Search Console, manual audits, penalties, and Google Trends.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Analytics & Speed</h3>
+          <p>Google Tag Manager and GA4 tags, performance score 100 on desktop, 96-98 on mobile, page speed checks, conversion events, and tracking clarity.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Marketing Automation</h3>
+          <p>Snovio and Mailchimp email automation, Canva content production, Buffer and Hootsuite scheduling, plus Facebook, Instagram, and Reddit management.</p>
+        </article>
+        <article>
+          <span>04</span>
+          <h3>Ads & Performance</h3>
+          <p>Google Ads, Meta Ads, Google Ads Library and Facebook Ads Library research, conversion rate optimization, budget optimization, ROI analysis, attribution modeling, and performance tracking.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="process" aria-labelledby="process-title">
+      <div class="section-head">
+        <p class="section-label">Process</p>
+        <h2 id="process-title">A clear operating system for growth</h2>
+      </div>
+
+      <div class="process-list">
+        <div>
+          <span>Discovery</span>
+          <h3>Audit the search and tracking baseline</h3>
+          <p>Review rankings, pages, tags, speed, SERP competitors, and technical blockers.</p>
+        </div>
+        <div>
+          <span>Strategy</span>
+          <h3>Map intent to campaigns</h3>
+          <p>Group keywords, audiences, content formats, landing pages, and ad angles by funnel stage.</p>
+        </div>
+        <div>
+          <span>Execution</span>
+          <h3>Launch, optimize, and automate</h3>
+          <p>Ship SEO fixes, campaign assets, email workflows, analytics tags, and social scheduling.</p>
+        </div>
+        <div>
+          <span>Performance</span>
+          <h3>Measure ROI and improve conversion</h3>
+          <p>Track spend, attribution, conversion quality, rankings, and the next set of tests.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <p class="section-label">Contact</p>
+      <h2>Ready to grow search traffic, leads, and campaign ROI?</h2>
+      <div class="contact-actions">
+        <a href="mailto:puriprabhat@gmail.com">puriprabhat@gmail.com</a>
+        <a href="tel:+919999503888">9999-503-888</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
