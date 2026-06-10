@@ -1,22 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
+<!--
+  ============================================================
+  sitemap.xml | Mr. Fantasy Portfolio
+  Technical SEO Optimized | AIO/GIO Compliant
+  Generated: 2026-06-10
+  Validator: https://www.xml-sitemaps.com/validate-xml-sitemap.html
+  ============================================================
+-->
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+    http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- ======================================================
+       CORE PAGES
+       ====================================================== -->
+
+  <!-- Homepage -->
   <url>
     <loc>https://puriprabhat-a11y.github.io/Mr.-Fantasy-/</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- About -->
   <url>
     <loc>https://puriprabhat-a11y.github.io/Mr.-Fantasy-/about.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Contact -->
   <url>
     <loc>https://puriprabhat-a11y.github.io/Mr.-Fantasy-/contact.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <!-- add one <url> block per page in /projects/ -->
+
+  <!-- ======================================================
+       PROJECTS / CASE STUDIES
+       Add one <url> block per project page below.
+       Pattern: /projects/your-project-name.html
+       ====================================================== -->
+
+  <!-- Example — SEO Case Study (replace with your real filenames) -->
+  <!--
+  <url>
+    <loc>https://puriprabhat-a11y.github.io/Mr.-Fantasy-/projects/seo-case-study.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://puriprabhat-a11y.github.io/Mr.-Fantasy-/projects/google-ads-case-study.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://puriprabhat-a11y.github.io/Mr.-Fantasy-/projects/meta-ads-case-study.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://puriprabhat-a11y.github.io/Mr.-Fantasy-/projects/cro-case-study.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  -->
+
 </urlset>
