@@ -1,11 +1,3 @@
-# robots.txt | Mr. Fantasy Portfolio (SPA)
-# Technical SEO + AIO/GIO Optimized | 2026-06-10
-# NOTE: This is a Single Page Application.
-# All content is served from the root URL (/).
-# Static file paths like /about.html do not exist.
-
-Sitemap: https://puriprabhat-a11y.github.io/Mr.-Fantasy-/sitemap.xml
-
 # === GOOGLE ===
 User-agent: Googlebot
 Allow: /
@@ -117,6 +109,9 @@ Disallow: /.env
 Disallow: /.env.local
 Disallow: /.vpn/
 Disallow: /.gitignore
+
 Disallow: /.gitattributes
 Disallow: /LICENSE
 Disallow: /README.md
+
+Sitemap: https://puriprabhat-a11y.github.io/Mr.-Fantasy-/sitemap.xml
