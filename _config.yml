@@ -1,36 +1,15 @@
 title: Mr Fantasy
-url: "https://puriprabhat-a11y.github.io/Mr-Fantasy/"
-baseurl: "/Mr-Fantasy/"
 
-# ============================================================
-# PERFORMANCE & SEO PLUGINS
-# ============================================================
+url: "https://puriprabhat-a11y.github.io"
+baseurl: "/Mr-Fantasy"
+
 plugins:
   - jekyll-seo-tag
-  - jekyll-compress-html
+  - jekyll-sitemap
 
-# ============================================================
-# HTML COMPRESSION (minify CSS, JS, HTML)
-# ============================================================
-compress_html:
-  clippings: all
-  comments: []
-  endings: []
-  startings: []
-  blanklines: false
-  profile: false
-  ignore:
-    envs: []
-
-# ============================================================
-# BUILD OUTPUT
-# ============================================================
-output: "site"
 safe: true
 encoding: utf-8
+destination: site
 
-# ============================================================
-# SASS OUTPUT (compressed CSS)
-# ============================================================
 sass:
   style: compressed
