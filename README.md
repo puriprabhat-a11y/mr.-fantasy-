@@ -1,2 +1,3 @@
-# Mr.-Fantasy-
-	Performance Marketer
+# Mr-Fantasy
+Performance Marketer
+Authore - Prabhat Puri
